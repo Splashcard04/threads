@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='./index.css' type='text/css'>
+</head>
+<body>
+
+
+    	<div class='top-container'>
+        	<div class='header'>
+            
+            	<p>Idk here yet</p>
+                <h1>QR Code Generator</h1>
+            
+            </div>
+        </div>
+        
+        <div class='input-container'>
+        	
+            <input type='text' id='input' placeholder='Enter Desired URL'>
+            <br> <br>
+            <button id='submit'>Generate QR</button>
+        
+        </div>
+        
+        <div class='result-container'>
+        
+        	<p id='loading'>Result will appear here</p>
+            <img src='' id='image'>
+            <p id='create'></p>
+        
+        </div>
+    
+    
+    <script>
+    
+    	const button = document.getElementById('submit')
+        const image = document.getElementById('image')
+        const input = document.getElementById('input')
+        const loading = document.getElementById('loading')
+        const p = document.getElementById('create')
+        
+        button.addEventListener('click', function() {
+        	if(input.value == '' | ' ') {
+            	alert('please enter a URL')
+                return
+            }
+        	if(input.value.indexOf('https://') == -1) {
+            	alert('please enter a valid URL')
+                return
+            }
+            
+            loading.innerHTML = 'Result Loading...'
+            
+            image.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${input.value}`
+            
+            
+            
+            setTimeout(() => {
+            	loading.innerHTML = ''
+                p.innerHTML = `Generate Another >`
+            }, 900)
+            
+            
+            
+        })
+
+    </script>
+
+</body>
+</html>
