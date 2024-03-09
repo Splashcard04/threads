@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    padding-left: 35%
+}
+
+.header p {
+    color: #fd8fd0;
+    font-size: 15px;
+    margin-bottom: 5px;
+    transition: letter-spacing 1s;
+    cursor: default
+}
+
+.header p:hover {
+    letter-spacing: 1.5px;
+    text-decoration: underline
+}
+
+.header h1 {
+    color: white;
+    font-size: 35px;
+    margin-top: 0
+}
+
+.input-container {
+    text-align: center;
+    padding-top: 5%
+}
+
+#url {
+    font-size: 20px;
+    outline: none;
+    border-style: solid;
+    border-color: #fd8fd0;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    width: 60%;
+       transition: border-color 1s
+}
+
+#url::placeholder {
+    color: white
+}
+
+#url:focus {
+    border-color: #f70893;
+    background-color: black;
+    color: white
+}
+
+#submit {
+    font-size: 18px;
+    padding: 1%;
+    background-color: #fd8fd0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s
+}
+
+#submit:hover {
+    background-color: #f70893
+}

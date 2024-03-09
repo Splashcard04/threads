@@ -1,0 +1,28 @@
+.result-container {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.result-container p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+
+#link {
+    color: #fd8fd0
+}
+
+#reload {
+    font-size: 18px;
+    padding: 1%;
+    background-color: #fd8fd0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#reload:hover {
+    background-color: #f70893
+}
